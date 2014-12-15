@@ -260,12 +260,10 @@ Trials for the attributes and targets:
 ***********************************************************************
 SURVEY
 ***********************************************************************
-<radiobuttons sex>
+<dropdown sex>
 / caption = "Gender"
-/ options = (
-    "Female", 
-    "Male" )
-</radiobuttons>
+/ options = ("female", "male")
+</dropdown>
 
 <textbox age>
 / caption = "Age"
@@ -275,7 +273,7 @@ SURVEY
 
 <surveypage demographics1>
 / caption = "Please answer the following demographic questions"
-/ questions = [1=sex] 
+/ questions = [1=sex; 2=age] 
 </surveypage>
 
 <surveypage demographics2>
@@ -284,9 +282,7 @@ SURVEY
 </surveypage>
 
 <survey demographics>
-/ pages = [1=demographics1; 2=demographics2]
-/ responsefontstyle = ("Verdana", -12, false, false, false, false, 5, 0)
-/ itemfontstyle = ("Verdana", -13, false, false, false, false, 5, 0)
+/ pages = [1=demographics1]
 / itemspacing = 2%
 / showpagenumbers = false
 </survey>
