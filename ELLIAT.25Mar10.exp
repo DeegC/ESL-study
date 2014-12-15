@@ -1,0 +1,501 @@
+
+***********************************************************************
+AUTHORSHIP & NOTES:
+-This script was created by Christopher Dial (cdial@wjh.harvard.edu) for Jamie 25 March 2010.
+-This version presents a standard IAT that will be run in conjuction with a second, similar IAT. Each is "stand alone."
+-The attributes are Good/Bad.
+-The first "block" of this IAT is a single trial of an image (explaining that the E and I keys are used). This may necessitate recoding the blocknum column
+in the data before running analysis syntax (if the syntax expects certain blocks to be numbered a certain way).
+-Note, using Dana's "goodspss" analysis syntax, positive D values in the data indicate a healthy response (e.g. participant associates me+not cutting, not me+cutting).
+-LAST MODIFIED 25 March 2010.
+
+***********************************************************************
+
+***********************************************************************
+GENERAL:
+Things that are related to the experiment as a whole are in the following section
+-some scripts include the pre- and post-trial pauses in the trial definition section so that specific stimuli, 
+if desired, can be presented at different speeds (e.g. images vs. text). This script presents all stimuli at the same speed.
+-if you do not wish to present errors (red Xs), just change true to false in the text error font style definition
+-locations and sizes of elements are given in percentages so that the script will run in an aesthetically pleasing format on different monitor sizes;
+a more controlled version would present all items in sub-frames of an identical size (as at implicit.harvard.edu)
+-all pre- and post- trial pauses in this IAT were set to 200 to match Greenwald's and Draine's IAT templates (though, in an email with srinsriram@gmail.com, 
+it was noted that this really isn't usually that important)
+-Overview: (1) stimuli are listed; (2) their type is defined; (3) these types are defined as trials; (4) the trials are defined as blocks; [instructions, etc.;] (5) blocks are arranged into experiments.
+
+***********************************************************************
+
+<data>
+/ columns = [date time subject blockcode blocknum trialcode trialnum response correct latency stimulusnumber stimulusitem] / format = TAB
+</data>
+
+<defaults>
+/ screencolor = (0,0,0)
+/ txbgcolor = (0,0,0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 6.5%, true, false, false, false, 5, 0)
+/ pretrialpause = 200
+/ posttrialpause = 200
+</defaults>
+
+<text error>
+/ position = (50%, 85%)
+/ items = ("X")
+/ color = (255, 0, 0)
+/ fontstyle = ("Arial", 10%, true)
+</text>
+
+
+***********************************************************************
+STIMULI AND STIMULI CHARACTERISTICS:
+The "item" section is where the specific stimuli (category labels and items belonging to those categories) are listed. Their type is later defined as picture or text.
+-In this script, stimuli are first listed free of type (text, picture, etc.); the type is defined in the stimulus-type subsection.
+
+***********************************************************************
+
+<item attributeAlabel>
+/1 = "ELL Students"
+</item>
+
+<item attributeA>
+/1 = "English Language Learner"
+/2 = "Language Minority Student"
+/3 = "Limited English Proficient"
+/4 = "ELL"
+/5 = "ESOL Student"
+
+</item>
+
+<item attributeBlabel>
+/1 = "Mainstream Students"
+</item>
+
+<item attributeB>
+/1 = "Mainstream Student"
+/2 = "Regular Ed Student"
+/3 = "General Ed Student"
+
+</item>
+
+<item targetAlabel>
+/1 = "Good"
+</item>
+
+<item targetA>
+/1 = "beautiful"
+/2 = "peace"
+/3 = "love"
+/4 = "delicious"
+/5 = "sunshine"
+/6 = "happiness"
+</item>
+
+<item targetBlabel>
+/1 = "Bad"
+</item>
+
+<item targetB>
+/1 = "war"
+/2 = "disease"
+/3 = "suicide"
+/4 = "anger"
+/5 = "bomb"
+/6 = "death"
+</item>
+
+******************************
+Category Label Stimuli (the items on the left and right sides of the screen) Characteristics:
+******************************
+
+<text attributeAleft>
+/ items = attributeAlabel
+/ valign = top
+/ halign = left
+/ position = (5%, 5%)
+/ txcolor = (0, 255, 0)
+</text>
+
+<text attributeBright>
+/ items = attributeBlabel
+/ valign = top
+/ halign = right
+/ position = (95%, 5%)
+/ txcolor = (0, 255, 0)
+</text>
+
+<text attributeAleftmixed>
+/ items = attributeAlabel
+/ valign = top
+/ halign = left
+/ position = (5%, 19%)
+/ txcolor = (0, 255, 0)
+</text>
+
+<text attributeBrightmixed>
+/ items = attributeBlabel
+/ valign = top
+/ halign = right
+/ position = (95%, 19%)
+/ txcolor = (0, 255, 0)
+</text>
+
+<text orleft>
+/ items = ("or")
+/ valign = top
+/ halign = left
+/ position = (5%, 13.5%)
+/ fontstyle = ("Arial", 3.5%)
+</text>
+
+<text orright>
+/ items = ("or")
+/ valign = top
+/ halign = right
+/ position = (95%, 13.5%)
+/ fontstyle = ("Arial", 3.5%)
+</text>
+
+<text targetAleft>
+/ items = targetAlabel
+/ valign = top
+/ halign = left
+/ position = (5%, 5%)
+</text>
+
+<text targetAright>
+/ items = targetAlabel
+/ valign = top
+/ halign = right
+/ position = (95%, 5%)
+</text>
+
+<text targetBleft>
+/ items = targetBlabel
+/ valign = top
+/ halign = left	
+/ position = (5%, 5%)
+</text>
+
+<text targetBright>
+/ items = targetBlabel
+/ valign = top
+/ halign = right
+/ position = (95%, 5%)
+</text>
+
+******************************
+Centered Stimuli (the items that belong to the categories on the left or right; usually either 'picture' or 'text').
+******************************
+
+<text attributeA>
+/ items = attributeA
+/ txcolor = (0, 255, 0)
+</text>
+
+<text attributeB>
+/ items = attributeB
+/ txcolor = (0, 255, 0)
+</text>
+
+<text targetA>
+/ items = targetA
+/ txcolor = (255, 255, 255)
+</text>
+
+<text targetB>
+/ items = targetB
+/ txcolor = (255, 255, 255)
+</text>
+
+***********************************************************************
+TRIALS 
+-This section defines nearly all trials in the script, their specs and behavior.
+***********************************************************************
+******************************
+Trials for the attributes and targets:
+******************************
+
+<trial attributeA>
+/ validresponse = ("E", "I")
+/ correctresponse = ("E")
+/ stimulusframes = [1 = attributeA]
+</trial>
+
+<trial attributeB>
+/ validresponse = ("E", "I")
+/ correctresponse = ("I")
+/ stimulusframes = [1 = attributeB]
+</trial>
+
+<trial targetAleft>
+/ validresponse = ("E", "I")
+/ correctresponse = ("E")
+/ stimulusframes = [1 = targetA]
+</trial>
+
+<trial targetAright>
+/ validresponse = ("E", "I")
+/ correctresponse = ("I")
+/ stimulusframes = [1 = targetA]
+</trial>
+
+<trial targetBleft>
+/ validresponse = ("E", "I")
+/ correctresponse = ("E")
+/ stimulusframes = [1 = targetB]
+</trial>
+
+<trial targetBright>
+/ validresponse = ("E", "I")
+/ correctresponse = ("I")
+/ stimulusframes = [1 = targetB]
+</trial>
+
+***********************************************************************
+BLOCK DEFINITIONS:
+-Here's where you define what all of the blocks in your study will consist of
+-In this script, I first define all practice stuff, then define all test stuff.
+-Note the number of trials in this script.
+-As recommended in the Nosek literature, the "target switching" blocks (the block that occurs between the first and second test blocks) 
+will have the same number of trials as the test blocks (to reduce any effect of order).
+-This script randomly presents stimuli, thus, it is possible (though unlikely) for a given stimulus to appear twice in a row. 
+***********************************************************************
+
+******************************
+beginning block:
+******************************
+<block startpic>
+/ bgstim = (startpic) / trials = [1 = startpic]  </block>
+
+******************************
+attribute block that, in this study, never changes sides (e.g. "me" always on the left; "not me" always on the right):
+******************************
+
+<block attributepractice20>
+/ bgstim = (attributeAleft, attributeBright)
+/ trials = [1=instructions;2-21 = random(attributeA, attributeB)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ recorddata = true
+</block>
+
+******************************
+-Cutting(A) & Not Cutting(B) 20, 20, 40, 20, 40 block stuff below
+******************************
+<block AleftBrightpractice20>
+/ bgstim = (targetAleft, targetBright)
+/ trials = [1=instructions;2-21 = random(targetAleft, targetBright)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ recorddata = true
+</block>
+
+<block ArightBleftpractice20>
+/ bgstim = (targetAright, targetBleft)
+/ trials = [1=instructions;2-21 = random(targetAright, targetBleft)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ recorddata = true
+</block>
+
+<block ArightBleftpracticeswitch40>
+/ bgstim = (targetAright, targetBleft)
+/ trials = [1=instructions;2-41 = random(targetAright, targetBleft)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ recorddata = true
+</block>
+
+<block AleftBrightpracticeswitch40>
+/ bgstim = (targetAleft, targetBright)
+/ trials = [1=instructions;2-41 = random(targetAleft, targetBright)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ recorddata = true
+</block>
+
+
+
+
+
+
+
+<block AleftBrightcompatiblepractice20>
+/ bgstim = (targetAleft, orleft, attributeAleftmixed, targetBright, orright, attributeBrightmixed)
+/ trials = [1=instructions;
+  3,5,7,9,11,13,15,17,19,21 = random(targetAleft, targetBright);
+  2,4,6,8,10,12,14,16,18,20 = random(attributeA, attributeB)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ recorddata = true
+</block>
+
+<block AleftBrightcompatibletest40>
+/ bgstim = (targetAleft, orleft, attributeAleftmixed, targetBright, orright, attributeBrightmixed)
+/ trials = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39 = random(targetAleft, targetBright);
+  2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40 = random(attributeA, attributeB)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ recorddata = true
+</block>
+
+<block BleftArightincompatiblepractice20>
+/ bgstim = (targetBleft, orleft, attributeAleftmixed, targetAright, orright, attributeBrightmixed)
+/ trials = [1=instructions;
+  3,5,7,9,11,13,15,17,19,21 = random(targetBleft, targetAright);
+  2,4,6,8,10,12,14,16,18,20 = random(attributeA, attributeB)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ recorddata = true
+</block>
+
+<block BleftArightincompatibletest40>
+/ bgstim = (targetBleft, orleft, attributeAleftmixed, targetAright, orright, attributeBrightmixed)
+/ trials = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39 = random(targetBleft, targetAright);
+  2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40 = random(attributeA, attributeB)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ recorddata = true
+</block>
+
+
+
+
+
+
+
+***********************************************************************
+START, END, & INSTRUCTION STUFF:
+-Studies can start or end with pre- and post- instructions (e.g. not "blocks"), or with  images or text defined as their own block. 
+-This script uses an image (defined later as its own block) to start the study, and post-instructions (not a block) to end the study.
+-If you have any pictures for beginning or ending your study, their type should be defined in the following section.
+(You will still need to define the trials and blocks in which these appear in their corresponding sections.)
+-If you simply want to use text to start or end your screen, that can be defined here as well (in the "instruct" section).
+-The "instruct" section of THIS script is specific only to the very final screen (it would also be specific to the pre-instructions if they were done in text rather than image).
+
+***********************************************************************
+
+******************************
+How this study will begin:
+-the beginning trial is defined here rather than in the "Trials" section
+******************************
+<picture startpic> 
+/ items = ("start.jpg") 
+/ numitems = 1
+</picture>
+
+<trial startpic> 
+/ correctresponse = (" ") 
+/ frames = [1=startpic] 
+/ responsemode = correct
+</trial>
+
+******************************
+How this study will conclude:
+-the concluding trial (if it were an image) would be defined here rather than in the "Trials" section (not applicable for the current script)
+******************************
+
+<instruct>
+/ nextlabel = "Continue"
+/ lastlabel = "Go To Part 2"
+/ prevkey = (0)
+/ inputdevice = mouse
+/ windowsize = (60%, 60%)
+/ screencolor = (0,0,0)
+/ fontstyle = ("Arial", 6.5%)
+/ txcolor = (255, 255, 0)
+</instruct>
+
+<page finish>
+^^You have completed Part I of the study. Click on the button to continue to Part 2.
+</page>
+
+******************************
+How the instructions throughout will appear:
+--the "counter" section refers to the sequence of the instructions and will generally be numerically equivalent 
+to the number of different instructions (e.g. between blocks) that you use
+-the instructions trial is defined here rather than in the "Trials" section
+******************************
+
+<text instructions>
+/ items = instructions
+/ hjustify = left
+/ size = (75%, 60%)
+/ position = (50%, 95%)
+/ valign = bottom
+/ select = instructions
+/ fontstyle = ("Arial", 3.5%)
+</text>
+
+<trial instructions>
+/ stimulustimes = [1=instructions, spacebar]
+/ correctresponse = (" ")
+/ errormessage = false
+/ recorddata = false
+</trial>
+
+<counter instructions>
+/ resetinterval = 20
+/ select = sequence(1, 2, 3, 4, 5)
+</counter>
+
+<item instructions>
+/ 1 = "Put your left and right pointer fingers on the E and I keys. Pictures or words from the categories at the top will appear one at a time in the middle of the screen. If the item belongs to a category on the left, press the E key; if the item belongs to a category on the right, press the I key. Items belong to only one category. If you make a mistake a red X will appear. Fix it by pushing the other key.
+
+This game is timed. You should GO AS FAST AS YOU CAN without making too many mistakes. Don't worry if you make some mistakes from going fast. That's okay.
+
+"
+/ 2 = "See above, the categories have changed. The items that appear in the middle of the screen have changed as well. The rules, however, are the same.
+
+When the item belongs to a category on the left, press the E key; when the item belongs to a category on the right, press the I key. Items belong to only one category.
+
+"
+/ 3 = "See above, the four categories you saw separately now appear together. The items in the middle belong to only one of the above categories. The green and white labels may help you identify the correct category.
+
+Use the E and I keys to sort the middle items into the four categories above. E for items from categories on the left; I for items from categories on the right.
+
+"
+/ 4 = "See above, now there are only two categories and they have switched sides.
+
+Go ahead and practice this new format. Don't worry if you make some mistakes.
+
+"
+/ 5 = "Notice above, the four categories from before now appear together in a new format. 
+
+The rules are the same. E for items on the left; I for items on the right. Try to go as fast as you can while making as few mistakes as possible.
+
+"
+
+</item>
+
+******************************
+This occurs at the bottom of EACH instruction:
+******************************
+
+<text spacebar>
+/ items = ("Press the SPACE BAR when you're ready to start.")
+/ position = (50%, 95%)
+/ valign = bottom
+/ fontstyle = ("Arial", 3.5%)
+</text>
+
+
+***********************************************************************
+EXPERIMENT:
+-This section defines the function and order that your blocks should occur ("expt" section), 
+and how counterbalancing, if applicable, should occur ("variables" section).
+-This script contains a single, 7-block IAT, with the following trials: (1), 20, 20, 20, 40, 40, 20, 40.
+-There are only 2 groups (i.e. a single counterbalancing).
+
+***********************************************************************
+
+<expt>
+/ blocks = [1=startpic; 2=attributepractice20; 3=block3; 4=block4; 5=block5; 6=block6; 7=block7; 8=block8]
+/ postinstructions = (finish)
+</expt>
+
+<variables>
+/ group = (1 of 2) (block3=ArightBleftpractice20; block4=BleftArightincompatiblepractice20; block5=BleftArightincompatibletest40; block6=AleftBrightpracticeswitch40; block7=AleftBrightcompatiblepractice20; block8=AleftBrightcompatibletest40)
+/ group = (2 of 2) (block3=AleftBrightpractice20; block4=AleftBrightcompatiblepractice20; block5=AleftBrightcompatibletest40; block6=ArightBleftpracticeswitch40; block7=BleftArightincompatiblepractice20; block8=BleftArightincompatibletest40)
+</variables>
+

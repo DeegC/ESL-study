@@ -1,0 +1,90 @@
+date	time	subject	blockcode	blocknum	trialcode	trialnum	response	correct	latency	stimulusnumber1	stimulusitem1
+121514	12:00:23	1	startpic	1	startpic	1	57	1	2271	1	start.jpg
+121514	12:00:23	1	attributepractice20	2	attributeA	2	18	0	4083	3	Limited English Proficient
+121514	12:00:23	1	attributepractice20	2	attributeB	3	23	1	580	2	Regular Ed Student
+121514	12:00:23	1	attributepractice20	2	attributeA	4	18	1	60	2	Language Minority Student
+121514	12:00:23	1	attributepractice20	2	attributeA	5	18	0	801	5	ESOL Student
+121514	12:00:23	1	attributepractice20	2	attributeB	6	23	1	264	1	Mainstream Student
+121514	12:00:23	1	attributepractice20	2	attributeA	7	18	1	565	1	English Language Learner
+121514	12:00:23	1	attributepractice20	2	attributeB	8	23	0	822	3	General Ed Student
+121514	12:00:23	1	attributepractice20	2	attributeA	9	18	0	835	4	ELL
+121514	12:00:23	1	attributepractice20	2	attributeB	10	23	0	904	3	General Ed Student
+121514	12:00:23	1	attributepractice20	2	attributeB	11	23	1	330	1	Mainstream Student
+121514	12:00:23	1	attributepractice20	2	attributeA	12	18	0	885	3	Limited English Proficient
+121514	12:00:23	1	attributepractice20	2	attributeB	13	23	1	375	2	Regular Ed Student
+121514	12:00:23	1	attributepractice20	2	attributeA	14	18	1	208	5	ESOL Student
+121514	12:00:23	1	attributepractice20	2	attributeB	15	23	1	135	2	Regular Ed Student
+121514	12:00:23	1	attributepractice20	2	attributeB	16	23	0	809	3	General Ed Student
+121514	12:00:23	1	attributepractice20	2	attributeB	17	23	1	583	1	Mainstream Student
+121514	12:00:23	1	attributepractice20	2	attributeB	18	23	1	743	1	Mainstream Student
+121514	12:00:23	1	attributepractice20	2	attributeA	19	18	0	1049	4	ELL
+121514	12:00:23	1	attributepractice20	2	attributeA	20	18	0	3637	2	Language Minority Student
+121514	12:00:23	1	attributepractice20	2	attributeA	21	18	1	407	1	English Language Learner
+121514	12:00:23	1	ArightBleftpractice20	3	targetBleft	2	18	0	1413	5	bomb
+121514	12:00:23	1	ArightBleftpractice20	3	targetBleft	3	18	1	291	1	war
+121514	12:00:23	1	ArightBleftpractice20	3	targetBleft	4	18	1	215	3	suicide
+121514	12:00:23	1	ArightBleftpractice20	3	targetBleft	5	18	1	222	6	death
+121514	12:00:23	1	ArightBleftpractice20	3	targetAright	6	23	0	877	2	peace
+121514	12:00:23	1	ArightBleftpractice20	3	targetBleft	7	18	0	856	4	anger
+121514	12:00:23	1	ArightBleftpractice20	3	targetBleft	8	18	0	1060	2	disease
+121514	12:00:23	1	ArightBleftpractice20	3	targetAright	9	23	0	128	3	love
+121514	12:00:23	1	ArightBleftpractice20	3	targetAright	10	23	0	154	4	delicious
+121514	12:00:23	1	ArightBleftpractice20	3	targetBleft	11	18	0	147	6	death
+121514	12:00:23	1	ArightBleftpractice20	3	targetBleft	12	18	0	172	5	bomb
+121514	12:00:23	1	ArightBleftpractice20	3	targetBleft	13	18	0	76	2	disease
+121514	12:00:23	1	ArightBleftpractice20	3	targetBleft	14	18	1	456	4	anger
+121514	12:00:23	1	ArightBleftpractice20	3	targetAright	15	23	1	45	5	sunshine
+121514	12:00:23	1	ArightBleftpractice20	3	targetAright	16	23	1	396	6	happiness
+121514	12:00:23	1	ArightBleftpractice20	3	targetAright	17	23	0	188	1	beautiful
+121514	12:00:23	1	ArightBleftpractice20	3	targetAright	18	23	1	339	5	sunshine
+121514	12:00:23	1	ArightBleftpractice20	3	targetAright	19	23	0	309	2	peace
+121514	12:00:23	1	ArightBleftpractice20	3	targetAright	20	23	0	496	6	happiness
+121514	12:00:23	1	ArightBleftpractice20	3	targetAright	21	23	0	435	4	delicious
+121514	12:00:23	1	BleftArightincompatiblepractice20	4	attributeB	2	23	0	1901	2	Regular Ed Student
+121514	12:00:23	1	BleftArightincompatiblepractice20	4	targetAright	3	23	1	518	1	beautiful
+121514	12:00:23	1	BleftArightincompatiblepractice20	4	attributeA	4	18	1	856	3	Limited English Proficient
+121514	12:00:23	1	BleftArightincompatiblepractice20	4	targetAright	5	23	1	549	3	love
+121514	12:00:23	1	BleftArightincompatiblepractice20	4	attributeB	6	23	0	1070	3	General Ed Student
+121514	12:00:23	1	BleftArightincompatiblepractice20	4	targetBleft	7	18	1	530	1	war
+121514	12:00:23	1	BleftArightincompatiblepractice20	4	attributeB	8	23	1	372	3	General Ed Student
+121514	12:00:23	1	BleftArightincompatiblepractice20	4	targetBleft	9	18	1	276	3	suicide
+121514	12:00:23	1	BleftArightincompatiblepractice20	4	attributeA	10	18	0	889	4	ELL
+121514	12:00:23	1	BleftArightincompatiblepractice20	4	targetBleft	11	18	0	764	6	death
+121514	12:00:23	1	BleftArightincompatiblepractice20	4	attributeA	12	18	0	2036	2	Language Minority Student
+121514	12:00:23	1	BleftArightincompatiblepractice20	4	targetBleft	13	18	1	631	4	anger
+121514	12:00:23	1	BleftArightincompatiblepractice20	4	attributeA	14	18	1	254	1	English Language Learner
+121514	12:00:23	1	BleftArightincompatiblepractice20	4	targetAright	15	23	0	643	5	sunshine
+121514	12:00:23	1	BleftArightincompatiblepractice20	4	attributeA	16	18	1	288	5	ESOL Student
+121514	12:00:23	1	BleftArightincompatiblepractice20	4	targetBleft	17	18	0	748	3	suicide
+121514	12:00:23	1	BleftArightincompatiblepractice20	4	attributeB	18	23	1	621	2	Regular Ed Student
+121514	12:00:23	1	BleftArightincompatiblepractice20	4	targetAright	19	23	1	603	6	happiness
+121514	12:00:23	1	BleftArightincompatiblepractice20	4	attributeB	20	23	1	2602	1	Mainstream Student
+121514	12:00:23	1	BleftArightincompatiblepractice20	4	targetAright	21	23	0	1183	1	beautiful
+121514	12:00:23	1	BleftArightincompatibletest40	5	targetBleft	1	18	0	837	5	bomb
+121514	12:00:23	1	BleftArightincompatibletest40	5	attributeA	2	18	0	1833	2	Language Minority Student
+121514	12:00:23	1	BleftArightincompatibletest40	5	targetBleft	3	18	1	398	2	disease
+121514	12:00:23	1	BleftArightincompatibletest40	5	attributeA	4	18	1	326	4	ELL
+121514	12:00:23	1	BleftArightincompatibletest40	5	targetBleft	5	18	1	440	1	war
+121514	12:00:23	1	BleftArightincompatibletest40	5	attributeA	6	18	1	318	3	Limited English Proficient
+121514	12:00:23	1	BleftArightincompatibletest40	5	targetAright	7	23	0	841	3	love
+121514	12:00:23	1	BleftArightincompatibletest40	5	attributeB	8	23	1	317	3	General Ed Student
+121514	12:00:23	1	BleftArightincompatibletest40	5	targetBleft	9	18	1	320	3	suicide
+121514	12:00:23	1	BleftArightincompatibletest40	5	attributeB	10	23	1	331	2	Regular Ed Student
+121514	12:00:23	1	BleftArightincompatibletest40	5	targetAright	11	23	0	2045	2	peace
+121514	12:00:23	1	BleftArightincompatibletest40	5	attributeB	12	23	0	1305	1	Mainstream Student
+121514	12:00:23	1	BleftArightincompatibletest40	5	targetBleft	13	18	0	722	2	disease
+121514	12:00:23	1	BleftArightincompatibletest40	5	attributeB	14	23	0	684	3	General Ed Student
+121514	12:00:23	1	BleftArightincompatibletest40	5	targetAright	15	23	1	303	4	delicious
+121514	12:00:23	1	BleftArightincompatibletest40	5	attributeA	16	18	1	218	1	English Language Learner
+121514	12:00:23	1	BleftArightincompatibletest40	5	targetBleft	17	18	0	713	6	death
+121514	12:00:23	1	BleftArightincompatibletest40	5	attributeB	18	23	0	3050	1	Mainstream Student
+121514	12:00:23	1	BleftArightincompatibletest40	5	targetBleft	19	18	1	285	4	anger
+121514	12:00:23	1	BleftArightincompatibletest40	5	attributeB	20	23	1	257	2	Regular Ed Student
+121514	12:00:23	1	BleftArightincompatibletest40	5	targetBleft	21	18	1	319	5	bomb
+121514	12:00:23	1	BleftArightincompatibletest40	5	attributeA	22	18	0	825	5	ESOL Student
+121514	12:00:23	1	BleftArightincompatibletest40	5	targetBleft	23	18	1	7341	1	war
+121514	12:00:23	1	BleftArightincompatibletest40	5	attributeB	24	23	1	1017	1	Mainstream Student
+121514	12:00:23	1	BleftArightincompatibletest40	5	targetAright	25	23	0	2751	3	love
+121514	12:00:23	1	BleftArightincompatibletest40	5	attributeA	26	18	1	9236	2	Language Minority Student
+121514	12:00:23	1	BleftArightincompatibletest40	5	targetAright	27	23	1	5731	6	happiness
+121514	12:00:23	1	BleftArightincompatibletest40	5	attributeA	28	29	1	15558	3	Limited English Proficient
