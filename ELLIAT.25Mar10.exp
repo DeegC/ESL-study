@@ -54,15 +54,13 @@ The "item" section is where the specific stimuli (category labels and items belo
 ***********************************************************************
 
 <item attributeAlabel>
-/1 = "ELL Students"
+/1 = "English Learner Students"
 </item>
 
 <item attributeA>
 /1 = "English Language Learner"
 /2 = "Language Minority Student"
 /3 = "Limited English Proficient"
-/4 = "ELL"
-/5 = "ESOL Student"
 
 </item>
 
@@ -112,6 +110,7 @@ Category Label Stimuli (the items on the left and right sides of the screen) Cha
 / valign = top
 / halign = left
 / position = (5%, 5%)
+/ fontstyle = ("Arial", 5%, true, false, false, false, 5, 1)
 / txcolor = (0, 255, 0)
 </text>
 
@@ -120,6 +119,7 @@ Category Label Stimuli (the items on the left and right sides of the screen) Cha
 / valign = top
 / halign = right
 / position = (95%, 5%)
+/ fontstyle = ("Arial", 5%, true, false, false, false, 5, 1)
 / txcolor = (0, 255, 0)
 </text>
 
@@ -128,6 +128,7 @@ Category Label Stimuli (the items on the left and right sides of the screen) Cha
 / valign = top
 / halign = left
 / position = (5%, 19%)
+/ fontstyle = ("Arial", 5%, true, false, false, false, 5, 1)
 / txcolor = (0, 255, 0)
 </text>
 
@@ -136,6 +137,7 @@ Category Label Stimuli (the items on the left and right sides of the screen) Cha
 / valign = top
 / halign = right
 / position = (95%, 19%)
+/ fontstyle = ("Arial", 5%, true, false, false, false, 5, 1)
 / txcolor = (0, 255, 0)
 </text>
 
@@ -159,6 +161,7 @@ Category Label Stimuli (the items on the left and right sides of the screen) Cha
 / items = targetAlabel
 / valign = top
 / halign = left
+/ fontstyle = ("Arial", 5%, true, false, false, false, 5, 1)
 / position = (5%, 5%)
 </text>
 
@@ -166,6 +169,7 @@ Category Label Stimuli (the items on the left and right sides of the screen) Cha
 / items = targetAlabel
 / valign = top
 / halign = right
+/ fontstyle = ("Arial", 5%, true, false, false, false, 5, 1)
 / position = (95%, 5%)
 </text>
 
@@ -173,6 +177,7 @@ Category Label Stimuli (the items on the left and right sides of the screen) Cha
 / items = targetBlabel
 / valign = top
 / halign = left	
+/ fontstyle = ("Arial", 5%, true, false, false, false, 5, 1)
 / position = (5%, 5%)
 </text>
 
@@ -180,6 +185,7 @@ Category Label Stimuli (the items on the left and right sides of the screen) Cha
 / items = targetBlabel
 / valign = top
 / halign = right
+/ fontstyle = ("Arial", 5%, true, false, false, false, 5, 1)
 / position = (95%, 5%)
 </text>
 
