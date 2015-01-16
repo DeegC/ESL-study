@@ -258,36 +258,6 @@ Trials for the attributes and targets:
 </trial>
 
 ***********************************************************************
-SURVEY
-***********************************************************************
-<dropdown sex>
-/ caption = "Gender"
-/ options = ("female", "male")
-</dropdown>
-
-<textbox age>
-/ caption = "Age"
-/ mask = positiveinteger
-/ range = (7, 110)
-</textbox>
-
-<surveypage demographics1>
-/ caption = "Please answer the following demographic questions"
-/ questions = [1=sex; 2=age] 
-</surveypage>
-
-<surveypage demographics2>
-/ caption = "Please answer the following demographic questions (continued)"
-/ questions = [1=age] 
-</surveypage>
-
-<survey demographics>
-/ pages = [1=demographics1]
-/ itemspacing = 2%
-/ showpagenumbers = false
-</survey>
-
-***********************************************************************
 BLOCK DEFINITIONS:
 -Here's where you define what all of the blocks in your study will consist of
 -In this script, I first define all practice stuff, then define all test stuff.
@@ -350,6 +320,12 @@ attribute block that, in this study, never changes sides (e.g. "me" always on th
 / recorddata = true
 </block>
 
+
+
+
+
+
+
 <block AleftBrightcompatiblepractice20>
 / bgstim = (targetAleft, orleft, attributeAleftmixed, targetBright, orright, attributeBrightmixed)
 / trials = [1=instructions;
@@ -387,6 +363,11 @@ attribute block that, in this study, never changes sides (e.g. "me" always on th
 / responsemode = correct
 / recorddata = true
 </block>
+
+
+
+
+
 
 
 ***********************************************************************
@@ -515,7 +496,7 @@ and how counterbalancing, if applicable, should occur ("variables" section).
 ***********************************************************************
 
 <expt>
-/ blocks = [1=demographics; 2 = startpic; 3=attributepractice20; 4=block3; 5=block4; 6=block5; 7=block6; 8=block7; 9=block8]
+/ blocks = [1=startpic; 2=attributepractice20; 3=block3; 4=block4; 5=block5; 6=block6; 7=block7; 8=block8]
 / postinstructions = (finish)
 </expt>
 
