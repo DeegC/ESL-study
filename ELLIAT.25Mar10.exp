@@ -403,7 +403,7 @@ How this study will conclude:
 
 <instruct>
 / nextlabel = "Continue"
-/ lastlabel = "Go To Part 2"
+/ lastlabel = "Close"
 / prevkey = (0)
 / inputdevice = mouse
 / windowsize = (60%, 60%)
@@ -413,7 +413,7 @@ How this study will conclude:
 </instruct>
 
 <page finish>
-^^You have completed Part I of the study. Click on the button to continue to Part 2.
+^^Thank you for your time!  Please contact Dr. Jamie Harrison at jlh0069@auburn.edu if you have questions.
 </page>
 
 ******************************
