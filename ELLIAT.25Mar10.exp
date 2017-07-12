@@ -412,6 +412,10 @@ How this study will conclude:
 / txcolor = (255, 255, 0)
 </instruct>
 
+<page score>
+^^This will be a score. <%script.groupid%>
+</page>
+
 <page finish>
 ^^Thank you for your time!  Please contact Dr. Jamie Harrison at jlh0069@auburn.edu if you have questions.
 </page>
@@ -497,7 +501,7 @@ and how counterbalancing, if applicable, should occur ("variables" section).
 
 <expt>
 / blocks = [1=startpic; 2=attributepractice20; 3=block3; 4=block4; 5=block5; 6=block6; 7=block7; 8=block8]
-/ postinstructions = (finish)
+/ postinstructions = (score, finish)
 </expt>
 
 <variables>
